@@ -1,0 +1,79 @@
+@import 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css';
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
+
+.navbar {
+    margin-bottom: 30px;
+  }
+
+
+i{
+    width: 6mm;
+}
+
+a {
+    cursor: pointer;
+  }
+
+  .header {
+    padding-bottom: 40px;
+    padding-top: 5px;
+}
+
+.lowerheader{
+    display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;   
+}
+
+.textrefresh{
+    display: flex;
+    width: 50%;
+    margin-top: auto;
+}
+
+.btnrefresh{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.serversone{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.serverstwo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.gpexception{
+    padding-top: 10px;
+    padding-right: 10%;
+    padding-bottom: 10%;
+    padding-left: 10%;
+}
+.gpworkflow{
+    padding-top: 10px;
+    padding-right: 10%;
+    padding-bottom: 10%;
+}
+
+.qcdata{
+    padding-top: 10px;
+    padding-right: 10%;
+     padding-bottom: 10%;
+ }
+
+.metricsdata{
+    padding-top: 10px;
+    padding-bottom: 10%;
+    padding-left: 10%;
+}
+
+.invsvcs{
+    padding-top: 10px;
+    padding-right: 10%;
+    padding-bottom: 10%;
+    padding-left: 10%;
+}

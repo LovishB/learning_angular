@@ -1,0 +1,129 @@
+<div class="header">
+<h1>Developer Diagnostics</h1>
+<h6>Servers' Health Monitoring and links to associated dashboards</h6>
+</div>
+
+<div class="lowerheader">
+    <div class="textrefresh">
+    <h5 >Server Health : </h5>
+    </div>
+    <div class="btnrefresh">
+    <button #btn_refresh (click)='onRefresh()' class="btn btn-primary btn shadow " data-toggle="dropdown" style="background-color:darkgrey; border: darkgrey; margin-left: 20px;  width: 20%;"><i class="fa fa-refresh fa-spin" style="width: 5mm;"></i>   Refresh  </button>
+    </div>
+</div>
+
+<div class="serversone">
+
+    <div class="gpworkflow">
+        <button id="btn_gpworkflow" [ngClass]="[btngpworkflow?'btn btn-primary btn shadow':'btn btn-danger active btn shadow']" style="height: 44px;  width:90%; border-top-right-radius: 0px; border-bottom-right-radius: 0px;" type="button">
+            <i *ngIf="icongpworkflow===0" class="fa fa-spinner fa-spin" style="width: 5mm;"></i>
+            <i *ngIf="icongpworkflow===1" class="fa fa-check-circle" style="width: 5mm;"></i>
+            <i *ngIf="icongpworkflow===-1" class="fa fa-exclamation-circle" style="width: 5mm;"></i>
+             GP Workflow Server</button>
+            <button
+                style="min-height: 44px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;"
+                type="button"
+                [ngClass]="[btngpworkflow?'btn btn-primary dropdown-toggle dropdown-toggle-split':'btn btn-danger active dropdown-toggle dropdown-toggle-split']"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false">
+                <span class="visually-hidden"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Grafana</a></li>
+                <li><a class="dropdown-item" href="#">Splunk</a></li>
+              </ul>
+      </div>
+
+      <div class="gpexception">
+        <button id="btn_gpexception" [ngClass]="[btngpexception?'btn btn-primary btn shadow':'btn btn-danger active btn shadow']" style="height: 44px;  width:90%; border-top-right-radius: 0px; border-bottom-right-radius: 0px;" type="button">
+            <i *ngIf="icongpexception===0" class="fa fa-spinner fa-spin"></i>
+            <i *ngIf="icongpexception===1" class="fa fa-check-circle"></i>
+            <i *ngIf="icongpexception===-1" class="fa fa-exclamation-circle"></i>   
+            GP Exception Server  </button>
+            <button
+                style="min-height: 44px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;"
+                type="button"
+                [ngClass]="[btngpexception?'btn btn-primary dropdown-toggle dropdown-toggle-split':'btn btn-danger active dropdown-toggle dropdown-toggle-split']"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false">
+                <span class="visually-hidden"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Grafana</a></li>
+                <li><a class="dropdown-item" href="#">Splunk</a></li>
+              </ul>
+      </div>
+      
+      <div class="metricsdata">
+        <button id="btn_metricsdata" [ngClass]="[btnmetricsdata?'btn btn-primary btn shadow':'btn btn-danger active btn shadow']" style="height: 44px;  width:90%; border-top-right-radius: 0px; border-bottom-right-radius: 0px;" type="button">
+            <i *ngIf="iconmetricsdata===0" class="fa fa-spinner fa-spin"></i>
+            <i *ngIf="iconmetricsdata===1" class="fa fa-check-circle"></i>
+            <i *ngIf="iconmetricsdata===-1" class="fa fa-exclamation-circle"></i>
+              GPA Server METRICSDATA  </button>
+            <button
+                style="min-height: 44px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;"
+                type="button"
+                [ngClass]="[btnmetricsdata?'btn btn-primary dropdown-toggle dropdown-toggle-split':'btn btn-danger active dropdown-toggle dropdown-toggle-split']"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false">
+                <span class="visually-hidden"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Grafana</a></li>
+                <li><a class="dropdown-item" href="#">Splunk</a></li>
+              </ul>
+      </div>
+
+</div>
+
+<div class="serverstwo">
+    <div class="qcdata">
+        <button id="btn_qcdata" [ngClass]="[btnqcdata?'btn btn-primary btn shadow':'btn btn-danger active btn shadow']" style="height: 44px;  width:90%; border-top-right-radius: 0px; border-bottom-right-radius: 0px;" type="button">
+            <i *ngIf="iconqcdata===0" class="fa fa-spinner fa-spin"></i>
+            <i *ngIf="iconqcdata===1" class="fa fa-check-circle"></i>
+            <i *ngIf="iconqcdata===-1" class="fa fa-exclamation-circle"></i>
+            DashboardDataServer QCDATA </button>
+            <button
+                style="min-height: 44px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;"
+                type="button"
+                [ngClass]="[btnqcdata?'btn btn-primary dropdown-toggle dropdown-toggle-split':'btn btn-danger active dropdown-toggle dropdown-toggle-split']"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false">
+                <span class="visually-hidden"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Grafana</a></li>
+                <li><a class="dropdown-item" href="#">Splunk</a></li>
+              </ul>
+      </div>
+
+      <div class="invsvcs">
+        <button id="btn_invsvcs" [ngClass]="[btninvsvcs?'btn btn-primary btn shadow':'btn btn-danger active btn shadow']" 
+         style=" word-wrap: break-word; min-height: 44px;  width:90%; border-top-right-radius: 0px; border-bottom-right-radius: 0px;" type="button">
+         <i *ngIf="iconinvsvcs===0" class="fa fa-spinner fa-spin"></i>
+         <i *ngIf="iconinvsvcs===1" class="fa fa-check-circle"></i>
+         <i *ngIf="iconinvsvcs===-1" class="fa fa-exclamation-circle"></i>
+           DashboardDataServer InvSvcs </button>
+            <button
+                style="height: 44px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;"
+                type="button"
+                [ngClass]="[btninvsvcs?'btn btn-primary dropdown-toggle dropdown-toggle-split':'btn btn-danger active dropdown-toggle dropdown-toggle-split']"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false">
+                <span class="visually-hidden"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Grafana</a></li>
+                <li><a class="dropdown-item" href="#">Splunk</a></li>
+              </ul>
+      </div>
+
+  
+
+    <div class="extrabtn">
+       
+    </div>
+</div>
+
+
+  
